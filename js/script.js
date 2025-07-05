@@ -12,13 +12,13 @@ const greetings = [
   '¡Hola mundo... y a ti también!'
 ];
 
-// Elementos del DOM donde se mostrará el mensaje y el botón para cambiarlo.
+// Elementos del DOM donde se mostrará el mensaje y el botón para cambiarlo
 const welcomeMessage = document.getElementById('welcome-message');
 const changeButton = document.getElementById('change-message-btn');
 
-// Añadimos un "escuchador de eventos" al botón para el evento 'click'.
+// Añadimos un listener al botón para el evento 'click'
 changeButton.addEventListener('click', () => {
-  // Obtenemos un saludo aleatorio y actualizamos el mensaje de bienvenida.
+  // Obtenemos un saludo aleatorio y actualizamos el mensaje de bienvenida
   const randomIndex = Math.floor(Math.random() * greetings.length);
   welcomeMessage.textContent = greetings[randomIndex];
 });

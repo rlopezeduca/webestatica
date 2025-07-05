@@ -8,7 +8,6 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    gap: 2rem; /* Espacio entre la tarjeta y la imagen */
     padding: 2rem 1rem; /* Padding para que no se pegue a los bordes */
     box-sizing: border-box;
 }
@@ -32,7 +31,7 @@ h1 {
 p {
     color: #6c757d;
     font-style: italic;
-    font-size: 1.4rem; /* Aumentamos el tamaño de la fuente del párrafo */
+    font-size: 1.4rem;
 }
 
 button {
@@ -56,18 +55,15 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Media Query para hacer el diseño responsive en pantallas más pequeñas */
-@media (max-width: 768px) {
-    main {
-        padding: 2rem 1.5rem; /* Reducimos el padding horizontal en pantallas pequeñas */
-    }
+.image-container {
+    margin-top: 1rem;
 }
 
-/* Contenedor para la imagen debajo de la tarjeta */
 .image-container img {
-    max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
-    width: 100%; /* Asegura que la imagen sea responsiva */
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 8px; /* Bordes redondeados para la imagen */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil para la imagen */
     display: block; /* Evita espacios extra debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
 }
